@@ -1,0 +1,140 @@
+body{ /*Estiliza tudo que estiver dentro da tag body*/
+    font-family: 'Poppins'; /*Aplica a fonte poppins em todo texto que tem dentro do body*/
+}
+
+.cabecalho{/*. ponto informa que vamos utilizar a classe*/
+    display: flex; /*Quando desejar colocar um elemento do lado do outro, usamos o display flex, a direção é em linha(row)*/
+    justify-content: space-between; /* Espaça os elementos. Divide o espaço entre os elementos. space espaço, between entre*/
+    padding: 30px; /*Espaçamento do conteudo ate as bordas, quando informamos um unico vamor ele aplica o msm valor em todos os lados*/
+    max-width: 1440px; /*Definimos uma largura maxima de 1440pixels para o cabeçalho*/
+    margin: 0 auto; /* Forma de cerntralizar, informamos que nenhum valor deve ser aplicado a parte inferior e superior e nas laterias aplicamos o auto onde o valor exitente é dividido igualmente entre entre eles*/
+}
+
+.cabecalho .logo{ /*Informamos que vamos estilizar o logo que esta dentro do cabeçalho*/
+    width: 65px; /*Determina a largura de um elemento*/
+}
+
+.cabecalho .menu{ /*Informamos que vamos estilizar o menu que esta dentro do cabeçalho*/
+    display: flex; /*Quando desejar colocar um elemento do lado do outro*/
+    align-items: center; /*Alinha os itens verticalmente. este elemento só será aplicado se houver espaço vertical e horizontal por isso usamos o height na linha de baixo*/
+    height: 100%; /*Informa que desejamos que o elemento ocupe 100% da altura disponivel em relação ao pai.*/
+}
+
+.cabecalho nav li a{ /*Informamos que vamos estilizar o nav li a que esta dentro do cabecalho*/
+    font-weight: blod; /*O texto que se encontra dentro a ficará em negrito. font font, peso weight */
+    color: white; /*O texto ficará na cor branca. color cor*/
+    font-size: 25px; /*Modifica o tamanho da fonte.*/
+    padding: 10px 20px; /*Especificamos o espaçamento interno de 10px da parte superior e inferior e o espaçamento do conteudo de 20px das laterais*/
+    border-radius: 50px; /*Arredonda a borda em 50px. Border borda, radius raio*/
+    transition: 0.2;/*Tempo determinado para transição acontecer*/
+}
+
+.cabecalho nav li a:hover{ /*Informamos que vamos estilizar o nav li a quando passarmos o mouse sobre a  */
+    background-color: #d5011d;/*Estiliza cor do fundo do elemento*/
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto; /* Cerntraliza, informamos que nenhum valor deve ser aplicado a parte inferior e superior e nas laterias aplicamos o auto onde o valor exitente é dividido igualmente entre entre eles*/
+    display: flex; /*Quando desejar colocar um elemento do lado do outro*/
+    align-items: center; /*Alinha os elementos veticalmente*/
+    height: calc(100vh - 132px);/*Calc é uma função que calcula os 100vh que corresponde a 100% total da tela e diminuer a altura do menu.*/
+    padding: 0 30px 30px; /* Espaçamento do conteudo ate as bordas, informamos que nenhum valor deve ser aplicado a parte superior, 30px na parte inferior e nas laterias aplicamos 30px*/
+}
+
+.container .imagem-titulo{
+    max-width: 500px; /*Define a altura de 500px para o titulo da imagens*/
+}
+
+.container .descricao{
+    color: #a8adb7; /*Cor da fonte*/
+    width: 85%; /*Largura */
+    font-size: 18px; /*Aumenta o tamanho da font*/
+    margin: 30px 0; /*Aplica 30px nas laterais e nada(0) a ser aplicado na partr superior e infeiror*/
+}
+
+.container .botao-trailer{
+    background-color: #ff0021;/*Cor de fundo*/
+    color:#ffffff; /*Cor da fonte/texto*/ 
+    padding: 15px; /*Espaçamento do conteudo ate a borda*/
+    font-size: 18px; /*Tamanho da fonte*/
+    font-weight: bolder; /*Peso da fonte*/
+    cursor: pointer; /*Modifica o cursor de uma seta para uma mão apontando quando o cursor passar sobre o botão*/
+    border:none; /*Remove a borda*/
+    text-transform: uppercase; /*Define que o texto será exibido todo em maiusculo*/
+    transition: 0.5s all ease-in-out;/*Aplica um efeito de transição no tempo de 0.5 milissegundos quando mouse for colocadom sobre o botão para todos os elementos com efeito ease-in-out*/
+}
+.container .botao-trailer:hover{
+    transform:scale(1.1); /*Efeito de esclar/aumentar o botão em 1.1. O valor padrão é de 1.*/
+}
+
+.fundo-video{
+   
+    position: absolute; /*Remove do contesto atual da pagina e cria um novo contexto acima do atual. Podemos imaginar como uma folha sobre a outra.*/
+    z-index: -1;/*Aplica o elemento no eixo Z que representa profundidade, usamos o -1 para posicionar o elemento na parte de traz*/
+    width: 100vw; /*Ocupa 100% do tamanho da largura da tela*/
+    height: 100vh; /*Ocupa 100% do tamanho da altura da tela*/
+    overflow: hidden; /*Parte que trasbordou do tamanho vai ser ocultada*/
+    display: flex;
+    justify-content: center;
+}
+
+.fundo-video .video{
+    height: 100vh;/*Ocupa 100% do tamanho da altura da tela*/
+}
+
+.fundo-video::after{
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute; /**/
+    top:0; /*Informo que deve ficar posicionado ao topo no ponto 0*/
+    left: 0; /*Informo que deve ser posicionado a esquerda*/
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+}
+
+.modal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background-color: rgba(52,52,50,0.749);
+    visibility: hidden; /**/
+}
+
+.conteudo-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 15px; /*Cria um espaçamento de 15px entre os elemntos*/
+}
+
+.fechar-modal{ /*Estilizando botão de fechar(X)*/
+    background-color: #a8adb7;
+     color: #f03a17;/*Cor do botão fechar(X)*/
+     font-weight: bolder; /**/
+     font-size: 20px; /*Tamanho do X*/
+     width: 40px; /*Largura do alemento*/
+     text-align: center; /*Alinha no cento*/
+     cursor: pointer; /*Modifica o cursor de uma seta para uma mão apontando quando o cursor passar sobre o botão*/
+     border-radius: 10px; /*Aplica uma borda de 10px*/   
+}
+
+.modal iframe{
+    border-width: 0;
+    width: 640px;
+    height: 360px;
+}
+
+.modal.aberto{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Quando estiver estilizando um site, utilize background color aos estilizar um elemento pois isso irá te auxiliar a vizualizar o tamanho e posição do elemento.
+Começar a estilizar os elementos de cima para baixo pode facilitar seu trabalho 
+Não aconcelhamos o uso de position para posicionar elementos na tela*/

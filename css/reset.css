@@ -1,0 +1,13 @@
+*{
+   margin: 0; /*limitar a margem*/
+   padding: 0; /*Espaçamento interno do conteudo para borda do elemento*/
+   box-sizing: border-box; /*auxilia nos expaçamentos dos elementos da pagina(borde borda, box caixa)*/
+}
+
+ul{
+    list-style: none; /*Remove o estilo das listas, neste caso remove as bolinhas que haviam na fente das palavras home e detalhes. none(nenhum)*/
+}
+
+a{
+    text-decoration: none; /*Remove o estilo das listas, neste caso a cor azul dos links que forem exibidos na pagina.  none(nenhum) */
+}
